@@ -15,19 +15,17 @@ export class ClassCounet extends React.Component {
    }
 
    minusOne() {
-      this.setState({count: this.state.count + 1 })
+      this.setState({count: this.state.count - 1 })
    }
 
    render() {
       return (
-         < div >
+         <div>
             <p>Counter: {this.state.count}</p>
             <button onClick={this.addOne}>ADD</button>
             <button onClick={this.minusOne}>MINUS</button>
          </div >
       )
    }
-
 }
-
 export default ClassCounet
