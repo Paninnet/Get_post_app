@@ -1,8 +1,8 @@
 import React from 'react'
+import { MyButton } from '../UI/btn/MyButton';
 import classes from './PostItem.module.css'
 
 export const PostItem = (props) => {
-   console.log(props);
    return (
       <div className={classes.post_wrapper}>
          <div className={classes.post_description}>
@@ -11,7 +11,7 @@ export const PostItem = (props) => {
             <p>{props.data.body}</p>
          </div>
          <div className={classes.delete_btn}>
-            <button>Delete</button>
+            <MyButton onClick={()=>props.deletePost(props.data.id)}>Delete</MyButton>
          </div>
       </div>
    )
