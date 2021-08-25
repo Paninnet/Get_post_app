@@ -1,6 +1,5 @@
 import React from 'react'
 export const MySelect = ({defaultSelect,options, selectedSelect, value}) => {
-   debugger
    return(
       <select value={value} onChange={(e)=>selectedSelect(e.target.value)}>
         <option disabled value = ''>{defaultSelect}</option>
