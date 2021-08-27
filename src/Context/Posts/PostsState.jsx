@@ -29,7 +29,7 @@ export const PostsState = ({ children }) => {
 
    const showPosts = async () => {
       loading()
-      const postsData =  await axios.get(`${url}/posts`)
+      const postsData =  await axios.get(`${url}/posts?_limit=10`)
       dispatch({ type: SHOW_ALL_POSTS, postsData })
    }
 
