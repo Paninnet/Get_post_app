@@ -1,19 +1,4 @@
-.App {
-  text-align: center;
- 
-}
 
-.posts{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  width: 90%;
-
-}
-.form{
- width: 100%;
-}
 
 .App-logo {
   height: 40vmin;

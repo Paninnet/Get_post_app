@@ -1,0 +1,22 @@
+.ModalForm_wrapper{
+   display: flex;
+   flex-direction: column;
+   padding: 15px;
+}
+.Modalinput{
+   font-size: 16px;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+.ModalPtextarea{
+   font-size: 16px;
+   padding: 5px;
+   max-width: 558px;
+   min-width:558px ;
+   max-height: 200px;
+   min-height: 50px;
+   margin-bottom: 20px;
+}
+.Modalinput:nth-child(2){
+   margin-bottom: 40px;
+}

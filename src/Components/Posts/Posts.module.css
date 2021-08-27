@@ -1,0 +1,20 @@
+.Posts_wrapper{
+/* background-color: thistle; */
+width: 80%;
+margin: 0 auto;
+text-align: center;
+}
+.mowe_with_posts{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.notFounr{
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 300px;
+   bottom: 0;
+   font-size: 40px;
+   font-weight: 700;
+}
