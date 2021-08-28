@@ -15,7 +15,7 @@ export const Pages = ({ state, showActivePage, showPosts }) => {
    }, [state.currentPage])
 
 
-debugger
+
    return (
       <div className={classes.pages}>
          {paginationPagesArray.map((page, index) => {

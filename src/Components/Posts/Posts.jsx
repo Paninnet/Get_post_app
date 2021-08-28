@@ -13,24 +13,12 @@ export const Posts = () => {
 
    const { state, showPosts, selectSelect,serachPost,selectById,showActivePage } = useContext(postsContext)
 
-   // useEffect(() => {
-   //    showPosts()
-   // },[])
-
-   // useEffect(() => {
-   //    showPosts()
-   // },[state.currentPage])
-   
-   // if(state.loading) {
-   //    return(<Loader/>)
-   // }
-
    return (
       <div className={classes.Posts_wrapper}>
          <h1>Posts List</h1>
          <div className={classes.mowe_with_posts}>
             <button onClick={()=>setModal(true)}>Add Post</button>
-            <Modal setModal ={setModal} visible={modal}/>
+            <Modal  setModal ={setModal} visible={modal}/>
             <Input showPosts={showPosts} serachPost={serachPost}/>
             <Select state={state}  disabledValue='Selected by' changeSelect={selectSelect} selectById={selectById}
             optionValue={[{value: 'title', text: "Title"},{value:'body', text:"Description"},{value:'id', text:"ID"}]}/>
@@ -38,7 +26,7 @@ export const Posts = () => {
          <Pages showPosts={showPosts} serachPost={serachPost} showActivePage={showActivePage} state={state}/>
          {state.loading ? <Loader/>: <PostItem/>}
 
-         {state.filteredPost.length > 0 ? <PostItem /> : <p className={classes.notFounr}>Posts not found</p> }
+         {/* {state.filteredPost.length  ? <PostItem /> : <p className={classes.notFounr}>Posts not found</p> } */}
 
       </div>
    )

@@ -10,12 +10,4 @@ text-align: center;
    justify-content: space-between;
    margin-bottom: 20px;
 }
-.notFounr{
-   position: fixed;
-   left: 0;
-   right: 0;
-   top: 300px;
-   bottom: 0;
-   font-size: 40px;
-   font-weight: 700;
-}
+
