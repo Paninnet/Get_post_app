@@ -6,19 +6,24 @@ import { Modal } from '../Modal/Modal'
 import { Select } from '../Select/Select'
 import { Input } from '../Input/Input'
 import { Loader } from '../Loader/Loader'
+import { Pages } from '../Pages/Pages'
 
 export const Posts = () => {
    const [modal, setModal] = useState(false)
 
-   const { state, showPosts, selectSelect,serachPost,selectById } = useContext(postsContext)
+   const { state, showPosts, selectSelect,serachPost,selectById,showActivePage } = useContext(postsContext)
 
-   useEffect(() => {
-      showPosts()
-   },[])
+   // useEffect(() => {
+   //    showPosts()
+   // },[])
+
+   // useEffect(() => {
+   //    showPosts()
+   // },[state.currentPage])
    
-   if(state.loading) {
-      return(<Loader/>)
-   }
+   // if(state.loading) {
+   //    return(<Loader/>)
+   // }
 
    return (
       <div className={classes.Posts_wrapper}>
@@ -30,6 +35,8 @@ export const Posts = () => {
             <Select state={state}  disabledValue='Selected by' changeSelect={selectSelect} selectById={selectById}
             optionValue={[{value: 'title', text: "Title"},{value:'body', text:"Description"},{value:'id', text:"ID"}]}/>
          </div>
+         <Pages showPosts={showPosts} serachPost={serachPost} showActivePage={showActivePage} state={state}/>
+         {state.loading ? <Loader/>: <PostItem/>}
 
          {state.filteredPost.length > 0 ? <PostItem /> : <p className={classes.notFounr}>Posts not found</p> }
 

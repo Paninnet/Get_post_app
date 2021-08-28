@@ -1,0 +1,25 @@
+.pages{
+   margin: 0 auto;
+   width: 330px;
+   display: flex;
+   justify-content: space-between;
+
+}
+/* .activePage{
+   background-color: black;
+   color: white;
+   transition-duration: 0.5ms;
+} */
+
+.pageButton{
+   transition-duration: 0.5ms;
+}
+.pageButtonActive{
+   border: 2px solid white;
+   background-color: black;
+   color: white;
+}
+.pageButton:hover{
+   background-color:dimgray;
+   color: white;
+}

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export const Input = ({serachPost}) => {
 
    const [inputValue, setInputValue] = useState("")
-   debugger
+
    
    const changeInput = (inputText) => {
       setInputValue(inputText)

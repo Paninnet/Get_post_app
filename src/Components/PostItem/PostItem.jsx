@@ -4,13 +4,8 @@ import { postsContext } from '../../Context/Posts/postsContext'
 import classes from './PostItem.module.css'
 
 export const PostItem = () => {
-
-
    const { state, deletePost } = useContext(postsContext)
 
-
-
-   debugger
    return (
             <div >
                {state.filteredPost.map(item => {
